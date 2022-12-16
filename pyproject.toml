@@ -4,7 +4,6 @@ version = "0.0.1"
 description = ""
 authors = ["Rodrigo Delduca <rodrigodelduca@gmail.com>"]
 readme = "README.md"
-#packages = [{include = "docker_poetry_flask"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
