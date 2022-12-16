@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "docker-poetry-flask"
+version = "0.0.1"
+description = ""
+authors = ["Rodrigo Delduca <rodrigodelduca@gmail.com>"]
+readme = "README.md"
+#packages = [{include = "docker_poetry_flask"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+flask = "^2.2.2"
+gunicorn = "^20.1.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.12.0"
+isort = "^5.11.2"
+mypy = "^0.991"
+bandit = "^1.7.4"
+flake8 = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+force_single_line = true
