@@ -8,7 +8,7 @@ FROM base AS builder
 WORKDIR /opt
 RUN python -m venv venv
 RUN pip install poetry
-COPY poetry.lock pyproject.toml ./
+COPY pyproject.toml poetry.lock ./
 RUN poetry config virtualenvs.create false
 RUN poetry install --no-interaction --no-root --only main
 
