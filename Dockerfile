@@ -12,10 +12,10 @@ RUN poetry config virtualenvs.create false
 RUN poetry install --no-interaction --no-root --only main
 
 FROM base
+WORKDIR /opt
 ARG PORT=8000
 ENV PORT $PORT
 EXPOSE $PORT
-WORKDIR /opt
 COPY --from=builder /opt/venv venv
 COPY app app
 RUN useradd -r user
